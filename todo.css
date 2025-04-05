@@ -14,7 +14,7 @@ body{
  input{
     width: 270px;
     padding: 8px;
-    border: 2px solid rgb(145, 6, 127);
+    border: 2px solid rgb(145, 9, 127);
     outline: none;
     font-size: 19px;
 
@@ -45,6 +45,16 @@ body{
     right: 10px;
     cursor: pointer;
  }
+
+
+
+
+
+
+
+
+
+
 
 
 
