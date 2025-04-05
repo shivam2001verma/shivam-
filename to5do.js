@@ -1,17 +1,18 @@
-let inputs = document.getElementById("inp");
-let text = document.querySelector(".text");
+function validateForm() {
+    var username = document.registrationForm.username.value;
+    var email = document.registrationForm.email.value;
+    var password = document.registrationForm.password.value;
+    var confirmPassword = document.registrationForm.confirmPassword.value;
 
-function Add(){
-    if(inputs.value == ""){
-        alert("Please Enter Task")
-    }else{
-        let newEle = document.createElement("ul");
-        newEle.innerHTML=`${inputs.value} <i class="fa-solid fa-trash"></i>`;
-        text.appendChild(newEle);
-        inputs.value="";
-        newEle.querySelector("i").addEventListener("click" , remove);
-        function remove(){
-            newEle.remove()
-        }
+    if (username == "" || email == "" || password == "" || confirmPassword == "") {
+        alert("All fields must be filled out");
+        return false;
     }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match");
+        return false;
+    }
+
+    return true;
 }
